@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/luck/luck",
+    "pages/logs/logs",
+    "pages/yaoayao/yaoayao",
+    "pages/qiege/qiege",
+    "pages/yay/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ruiruiLuck",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Luck",
+        "iconPath": "image/start.png",
+        "selectedIconPath": "image/start-action.png"
+      },
+      {
+        "pagePath": "pages/yay/index",
+        "text": "摇一摇",
+        "iconPath": "image/shake.png",
+        "selectedIconPath": "image/shake-action.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

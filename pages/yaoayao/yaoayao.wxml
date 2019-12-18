@@ -1,0 +1,11 @@
+<view class="page">
+  <view class="app">
+    <view class="button">点击</view>
+  </view>
+  <view class="keys">
+    <text style='background:rgb{{beforeColor}}' wx:for='{{beforelist}}'>{{item}}</text>
+    <view></view>
+    <text style='background:rgb{{afterColor}}' wx:for='{{afterlist}}'>{{item}}</text>
+  </view>
+  <audio src="{{srcaud}}" id="myAudio"></audio>
+</view>
