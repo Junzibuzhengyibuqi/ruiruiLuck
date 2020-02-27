@@ -12,14 +12,15 @@ Page({
     voiceTime: '', //录音时间
     showVoice: false,
     autoplay: false,
+    phone:{}
   },
   //事件处理函数
-  bindViewTap: function() {
+  bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function() {
+  onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -48,7 +49,19 @@ Page({
     }
   },
 
-  getUserInfo: function(e) {
+  onShow() {
+    const phone = wx.getSystemInfoSync();;
+    console.log(phone.system, 1)
+    this.setData({
+      phone,
+    });
+    wx.setNavigationBarTitle({
+      title: `小小雨先生的${phone.brand}  ${phone.model}`,
+    });
+  },
+
+
+  getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
@@ -94,7 +107,7 @@ Page({
 
 
   playVoice() {
-    var voicePlayer = wx.createAudioContext('myAudio');
+    var voicePlayer = wx.createInnerAudioContext({});
 
     let {
       autoplay,
@@ -102,34 +115,37 @@ Page({
     } = this.data;
     console.log(voice, voicePlayer, 8787)
     voicePlayer.src = voice,
-    voicePlayer.play()
+    voicePlayer.autoplay = true
 
 
   },
-  // playVoice() {
-  //   var voicePlayer = wx.createAudioContext('myAudio');
 
-  //   let { autoplay, voice } = this.data;
-  //   if (!voice){
-  //     console.log('录音不存在');
-  //     return
-  //   }
-  //   voicePlayer.src = voice,
+  playVoice() {
+    var voicePlayer = wx.createInnerAudioContext({});
 
-  //   this.setData({
-  //     autoplay: !autoplay
-  //   }, () => {
-  //     if (this.data.autoplay) {
-  //       voicePlayer.play();
-  //       console.log('播放ing')
-  //     } else {
-  //       voicePlayer.pause();
-  //       console.log('播放中断')
+    let { autoplay, voice } = this.data;
+    if (!voice){
+      wx.showModal({
+        content: '想听最爱你的声音吗，那就按下 gomimi 录上一段吧*v*',
+      })
+      return
+    };
+    voicePlayer.src = voice;
+    voicePlayer.autoplay = true;
+    this.setData({
+      autoplay: !autoplay
+    }, () => {
+      if (this.data.autoplay) {
+        voicePlayer.play();
+        console.log('播放ing')
+      } else {
+        voicePlayer.pause();
+        console.log('播放中断')
 
-  //     }
+      }
 
-  //   })
+    })
 
-  // },
+  },
 
 })

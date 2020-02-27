@@ -33,7 +33,25 @@ App({
       }
     })
   },
+  onShow() {
+    wx.onAppRoute(res => {
+      let pages = getCurrentPages();
+      let view = pages[pages.length - 1];
+      wx.showShareMenu({
+        withShareTicket: true
+      });
+      view.onShareAppMessage = function () {
+        return {
+          title: '可好玩可好玩的小程序了呢~',
+          path: '/page/index/index',
+          imageUrl:'https://s2.ax1x.com/2020/01/15/lXf1Nq.jpg'
+        }
+      }
+    })
+  },
   globalData: {
     userInfo: null
   }
+
+  
 })

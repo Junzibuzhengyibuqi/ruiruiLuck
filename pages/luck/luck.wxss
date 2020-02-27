@@ -17,7 +17,7 @@ page{
   width: 270rpx;
   height: 50rpx;
   background: #fff;
-  color: #fff;
+  color: deeppink;
   border-radius: 8rpx;
   text-align: center;
   margin-bottom: 220rpx;

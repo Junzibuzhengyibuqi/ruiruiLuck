@@ -1,1 +1,11 @@
-<audio  src="{{srcaud}}" id="myAudio" ></audio>
+<view>
+  <text>小哥哥摇一下嘛   要乖哦~~~</text>
+
+  <image bindtap="playVoice" class="userinfo-avatar" src="{{imgsrc}}" mode="widthFix"></image>
+  <View>
+    <View>{{hitokoto}}</View>
+    <View>{{from}}</View>
+    <View>{{datahitokoto}}</View>
+    <View>{{datafrom}}</View>
+  </View>
+</view>

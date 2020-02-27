@@ -4,15 +4,17 @@
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     
 
-    <block wx:else>
+    <block wx:else class='animationSlow'>
       <image bindtap="playVoice" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view class="phoneName">这是小小雨先生的  {{phone.brand}}  {{phone.model}}</view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-  <view class="Button" bindtap="goLuck"> gogoLuck</view>
+  <view class="Button" bindtap="goLuck"> goLuck</view>
   <view class="Button Mimi" bindtouchstart="gomimi" bindtouchend="outmimi"> gomimi</view>
-  <audio src="{{srcaud}}" id="myAudio"></audio>
+  <view class="title">长按 gomimi 录音，录音完成后点击头像可播放</view>
+
 </view>

@@ -3,6 +3,7 @@ var beforelist = [];
 var afterlist = [];
 var beforeobj = {};
 var afterobj = {};
+var innerAudioContext ='';
 Page({
 
   /**
@@ -15,6 +16,8 @@ Page({
     afterlist: []
   },
   onShow() {
+    innerAudioContext = wx.createInnerAudioContext();
+    innerAudioContext.autoplay = true; //播发音频
     wx.onAccelerometerChange(e => {
       if (e.x > 1 || e.y > 1 || e.z >1) {
         this.bofang();
@@ -28,14 +31,19 @@ Page({
     })
   },
   onHide() {
+    innerAudioContext.destroy();
+  },
 
+  
+
+  onUnload() {
+    
   },
 
   bofang() {
-    console.log('播发摇一摇音频');
-    var audioCtx = wx.createAudioContext('myAudio');
-    audioCtx.setSrc('/image/match.mp3'); //音频文件，第三方的可自行选择
-    audioCtx.play(); //播发音频
+   
+    innerAudioContext.src = '/image/match.mp3';
+    
   },
 
   rgb() {

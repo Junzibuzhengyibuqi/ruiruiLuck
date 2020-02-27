@@ -24,13 +24,85 @@
   height: 80rpx;
   background: #13CE66;
   position: absolute;
-  bottom: 150rpx;
+  bottom: 50rpx;
   text-align: center;
   line-height: 80rpx;
   border-radius: 7rpx;
   color: #fff;
 }
 .Mimi{
-  bottom: 300rpx;
+  bottom: 150rpx;
 
+}
+.phoneName{
+  color: deeppink;
+  position: fixed;
+  top: 37%;
+  width: 100%;
+  text-align: center;
+}
+.title{
+  color: #999;
+  width: 100%;
+  text-align: center;
+  font-size: 20rpx;
+  margin-top: 50rpx;
+  background-color: #13CE66;
+}
+
+
+.animationSlow {
+  width: 100rpx;
+  height: 100rpx;
+  animation-name: myfirst; /*动画的名称 */
+  animation-duration: 2000ms; /*动画从开始到结束的时间*/
+  animation-timing-function: linear; /*动画执行快慢的参数*/
+  animation-iteration-count: infinite; /*动画执行多少次的参数*//*以下是兼容ios所需，参数意义与上相同*/
+  -webkit-animation-name: myfirst;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-teration-count: infinite;
+}
+@keyframes myfirst {
+  0% {
+    -webkit-transform: rotate(0deg);
+}
+
+25% {
+    -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+      -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+      -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
+}
+/*兼容ios*/
+@-webkit - keyframes myfirst {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  25% {
+      -webkit-transform: rotate(90deg);
+  }
+
+  50% {
+      -webkit-transform: rotate(180deg);
+  }
+
+  75% {
+      -webkit-transform: rotate(270deg);
+  }
+
+  100% {
+      -webkit-transform: rotate(360deg);
+  }
 }
