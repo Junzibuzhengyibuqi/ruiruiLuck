@@ -4,8 +4,8 @@
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     
 
-    <block wx:else class='animationSlow'>
-      <image bindtap="playVoice" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <block wx:else >
+      <view class='animationSlow'><image bindtap="playVoice" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image></view>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
