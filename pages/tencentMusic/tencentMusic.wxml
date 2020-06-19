@@ -1,0 +1,19 @@
+<view>
+    飒飒事{{all}}
+
+    
+   "pages/tencentMusic/tencentMusic",
+   {
+     "pagePath": "pages/tencentMusic/tencentMusic",
+     "text": "腾讯云曲库",
+     "iconPath": "image/music.png",
+     "selectedIconPath": "image/music-action.png"
+   }
+
+    <block wx:for="{{listType}}">
+        <view >
+        <text>{{index}}:</text>
+        <text>{{item.name}}</text>
+        </view>
+    </block>
+</view>

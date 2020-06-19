@@ -12,7 +12,7 @@ Page({
     voiceTime: '', //录音时间
     showVoice: false,
     autoplay: false,
-    phone:{}
+    phone: {}
   },
   //事件处理函数
   bindViewTap: function () {
@@ -115,7 +115,7 @@ Page({
     } = this.data;
     console.log(voice, voicePlayer, 8787)
     voicePlayer.src = voice,
-    voicePlayer.autoplay = true
+      voicePlayer.autoplay = true
 
 
   },
@@ -124,7 +124,7 @@ Page({
     var voicePlayer = wx.createInnerAudioContext({});
 
     let { autoplay, voice } = this.data;
-    if (!voice){
+    if (!voice) {
       wx.showModal({
         content: '想听最爱你的声音吗，那就按下 gomimi 录上一段吧*v*',
       })

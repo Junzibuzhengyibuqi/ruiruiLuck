@@ -6,6 +6,8 @@
     "pages/yaoayao/yaoayao",
     "pages/qiege/qiege",
     "pages/yay/index"
+   
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,9 +31,9 @@
         "iconPath": "image/shake.png",
         "selectedIconPath": "image/shake-action.png"
       }
+      
     ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
-  
 }
