@@ -174,6 +174,7 @@ Page({
   onHide: function () {
     audioCtx.destroy();
     clearInterval(myVar)
+    var audioCtx = ''
 
   },
 

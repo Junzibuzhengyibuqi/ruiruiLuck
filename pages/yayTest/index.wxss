@@ -1,0 +1,26 @@
+
+page{
+  padding: 24rpx;
+  box-sizing: border-box;
+  background-color: rgb(243, 232, 218);
+}
+.title {
+  box-sizing: border-box;
+  max-height: 20%;
+  margin-bottom: 20rpx;
+  padding: 20rpx;
+  color: rgb(194, 241, 226);
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.answer {
+  box-sizing: border-box;
+  width: 100%;
+  overflow-y: auto;
+  max-height: 40%;
+  padding: 20rpx;
+  color: #000;
+  background-color: #fff;
+  border-radius: 8rpx;
+}

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/yayTest/index",
     "pages/index/index",
     "pages/luck/luck",
     "pages/logs/logs",
@@ -24,6 +25,13 @@
         "text": "Luck",
         "iconPath": "image/start.png",
         "selectedIconPath": "image/start-action.png"
+      },
+
+      {
+        "pagePath": "pages/yayTest/index",
+        "text": "yayTest",
+        "iconPath": "image/music.png",
+        "selectedIconPath": "image/music-action.png"
       },
       {
         "pagePath": "pages/yay/index",
